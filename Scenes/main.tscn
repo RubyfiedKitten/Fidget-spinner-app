@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqp3n32w8l03f"]
+
+[ext_resource type="PackedScene" uid="uid://clpy5mxq0ft1u" path="res://Scenes/figget_spinner.tscn" id="1_rqpb4"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_w0tll"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_w0tll")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.148047, 0.188565, 0.197172, 1)
+
+[node name="Figget Spinner" parent="." instance=ExtResource("1_rqpb4")]
+position = Vector2(577, 325)
